@@ -66,7 +66,10 @@ class DatosPageState extends State<DatosPage> {
             ),
             SizedBox(height: 20),
             CircularSensorWidget(
-              value: humedad,
+              value:
+                  humedad2 != null
+                      ? double.tryParse(humedad2.toString()) ?? 0.0
+                      : 0.0,
               label: "S2\nHumidity.",
               color: Colors.lightBlue,
               symbol: "%",
