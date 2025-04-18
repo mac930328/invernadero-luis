@@ -1,6 +1,6 @@
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-import 'package:myapp/widgets/thermometer_widget.dart';
+import 'package:myapp/widgets/circular_sensor_widget.dart';
 
 class DatosPage extends StatefulWidget {
   const DatosPage({super.key});
@@ -45,23 +45,32 @@ class DatosPageState extends State<DatosPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Datos del Sensor')),
+      appBar: AppBar(title: Text('Datos de los Sensores')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            ThermometerWidget(
-              borderColor: Colors.red,
-              innerColor: Colors.blue,
-              indicatorColor: Colors.red,
-              temperature: temperatura,
-              width: 50,
+            CircularSensorWidget(
+              value: temperatura,
+              label: "S1\nTemp.",
+              color: Colors.orange,
+              symbol: "ºC",
             ),
             SizedBox(height: 20),
-            Text('Temperatura: ${temperatura.toStringAsFixed(1)} ºC'),
-            Text('Humedad: ${humedad.toStringAsFixed(1)} %'),
-            Text('Humedad 2: ${humedad2 ?? 'N/A'} %'),
+            CircularSensorWidget(
+              value: humedad,
+              label: "S1\nHumidity.",
+              color: Colors.blueAccent,
+              symbol: "%",
+            ),
+            SizedBox(height: 20),
+            CircularSensorWidget(
+              value: humedad,
+              label: "S2\nHumidity.",
+              color: Colors.lightBlue,
+              symbol: "%",
+            ),
           ],
         ),
       ),

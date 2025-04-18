@@ -18,89 +18,92 @@ class HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Column(
-                  children: [
-                    Text('L1'),
-                    IconButton(
-                      icon: Icon(
-                        Icons.lightbulb,
-                        size: 60,
-                        color: _isLight1On ? Colors.yellow : Colors.grey,
+    return Scaffold(
+      appBar: AppBar(title: const Text('Controles')),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Column(
+                    children: [
+                      const Text('L1'),
+                      IconButton(
+                        icon: Icon(
+                          Icons.lightbulb,
+                          size: 60,
+                          color: _isLight1On ? Colors.yellow : Colors.grey,
+                        ),
+                        onPressed: () {
+                          setState(() => _isLight1On = !_isLight1On);
+                          _updateControlValues();
+                        },
                       ),
-                      onPressed: () {
-                        setState(() => _isLight1On = !_isLight1On);
-                        _updateControlValues();
-                      },
-                    ),
-                  ],
-                ),
+                    ],
+                  ),
 
-                Column(
-                  children: [
-                    Text('L2'),
-                    IconButton(
-                      icon: Icon(
-                        Icons.lightbulb,
-                        size: 60,
-                        color: _isLight2On ? Colors.yellow : Colors.grey,
+                  Column(
+                    children: [
+                      const Text('L2'),
+                      IconButton(
+                        icon: Icon(
+                          Icons.lightbulb,
+                          size: 60,
+                          color: _isLight2On ? Colors.yellow : Colors.grey,
+                        ),
+                        onPressed: () {
+                          setState(() => _isLight2On = !_isLight2On);
+                          _updateControlValues();
+                        },
                       ),
-                      onPressed: () {
-                        setState(() => _isLight2On = !_isLight2On);
-                        _updateControlValues();
-                      },
-                    ),
-                  ],
-                ),
-              ],
-            ),
-            SizedBox(height: 50),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Column(
-                  children: [
-                    Text('F1'),
-                    IconButton(
-                      icon: Icon(
-                        Icons.ac_unit_rounded,
-                        size: 60,
-                        color: _isFan1On ? Colors.yellow : Colors.grey,
+                    ],
+                  ),
+                ],
+              ),
+              const SizedBox(height: 50),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Column(
+                    children: [
+                      const Text('F1'),
+                      IconButton(
+                        icon: Icon(
+                          Icons.ac_unit_rounded,
+                          size: 60,
+                          color: _isFan1On ? Colors.yellow : Colors.grey,
+                        ),
+                        onPressed: () {
+                          setState(() => _isFan1On = !_isFan1On);
+                          _updateControlValues();
+                        },
                       ),
-                      onPressed: () {
-                        setState(() => _isFan1On = !_isFan1On);
-                        _updateControlValues();
-                      },
-                    ),
-                  ],
-                ),
-                Column(
-                  children: [
-                    Text('F2'),
-                    IconButton(
-                      icon: Icon(
-                        Icons.ac_unit_rounded,
-                        size: 60,
-                        color: _isFan2On ? Colors.yellow : Colors.grey,
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      const Text('F2'),
+                      IconButton(
+                        icon: Icon(
+                          Icons.ac_unit_rounded,
+                          size: 60,
+                          color: _isFan2On ? Colors.yellow : Colors.grey,
+                        ),
+                        onPressed: () {
+                          setState(() => _isFan2On = !_isFan2On);
+                          _updateControlValues();
+                        },
                       ),
-                      onPressed: () {
-                        setState(() => _isFan2On = !_isFan2On);
-                        _updateControlValues();
-                      },
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ],
+                    ],
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
