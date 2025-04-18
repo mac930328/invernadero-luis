@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "952176293225",
+    "firebase_url": "https://invernadero-luis-default-rtdb.firebaseio.com",
+    "project_id": "invernadero-luis",
+    "storage_bucket": "invernadero-luis.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:952176293225:android:8ad1625b724e3255b779f8",
+        "android_client_info": {
+          "package_name": "com.example.invernadero_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7DDfPtW1qjgdLdgd630sb_tvmtrpYBiI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:952176293225:android:3417a2ea58418a2db779f8",
+        "android_client_info": {
+          "package_name": "com.example.myapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7DDfPtW1qjgdLdgd630sb_tvmtrpYBiI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
